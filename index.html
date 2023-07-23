@@ -1,24 +1,30 @@
-<script>
-
-
-</script>
-<!DOCTYPE html>
+<script></script>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <div id="main"></div>
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunar-javascript/1.6.2/lunar.js" integrity="sha512-HvSGfdi8vIplBc7cNhxj1HrdsfasNoQI9kRjekwEy5nx1uFgSI3c0uPd8GKvCQ12Aefxk5xmrEswYm+26CSTlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lunar-javascript/1.6.2/lunar.js"
+      integrity="sha512-HvSGfdi8vIplBc7cNhxj1HrdsfasNoQI9kRjekwEy5nx1uFgSI3c0uPd8GKvCQ12Aefxk5xmrEswYm+26CSTlg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
-const date = new Date();
-      var solar = Solar.fromYmd(date.getFullYear(), date.getMonth(), date.getDate());
+      const date = new Date();
+      var solar = Solar.fromYmd(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+      );
       var lunar = solar.getLunar();
       if (lunar.getDay() == 13 && lunar.getMonth() == 6) {
-      console.log("yes");
+        console.log("yes");
         document.getElementById("main").innerText = "Yes";
       } else {
-      console.log("no");
+        console.log("no");
         document.getElementById("main").innerText = "No";
       }
     </script>
